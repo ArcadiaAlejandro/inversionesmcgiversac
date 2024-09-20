@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  /*animacion del logos aliados*/
+@keyframes loop-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-loop-scroll {
+    display: flex;
+    animation: loop-scroll 70s linear infinite;
+  }
+  
+  /*animacion del header*/
+
+  .underline {
+    transition: all 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.hidden {
+    display: none;
+}
+
+  /*seccion de preguntas y respuestasr*/
+
+.faq-item:hover {
+  background-color: #d3d2d2a1;
+}
+
+.faq-item-active {
+  background-color: #2d3b833b;
+}
+
+@media print {
+  #content-to-export {
+    /* Estilos específicos para impresión */
+    width: auto;
+    height: auto;
+  }
+}
